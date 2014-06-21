@@ -98,7 +98,7 @@
 {
   Ball* ball = (Ball*)nodeA;
   [ball informCollisionBegin:pair Node:nodeB];
-  return NO;
+  return YES;
 }
 
 //------------------------------------------------------------------------------
@@ -116,7 +116,7 @@
 {
   Ball* ball = (Ball*)nodeA;
   [ball informCollisionBegin:pair Node:nodeB];
-  return NO;
+  return YES;
 }
 
 //------------------------------------------------------------------------------

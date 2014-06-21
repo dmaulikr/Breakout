@@ -43,6 +43,7 @@ const float kKd = 0.75f;
   // 物理
   self.physicsBody = [CCPhysicsBody bodyWithRect:self.spriteFrame.rect cornerRadius:0.f];
   self.physicsBody.collisionType = @"Bar";
+  self.physicsBody.type = CCPhysicsBodyTypeStatic;
   
   return self;
 }
