@@ -12,6 +12,7 @@
 @interface Ball : CCSprite {
  @private
   CGPoint vel_;
+  CGPoint velOffset_;
   float   rotVelDeg_;
 }
 

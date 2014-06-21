@@ -19,8 +19,8 @@
 //------------------------------------------------------------------------------
 
 const float kMaxRotVelDeg = 30.f;
-const float kRotVelKd = 0.96f;
-const float kBallVel = 14.f;
+const float kRotVelKd = 0.97f;
+const float kBallVel = 15.f;
 const float kAccByRot = 1.f;
 const float kRotAccDeg = 30.f;
 
@@ -43,6 +43,7 @@ const float kRotAccDeg = 30.f;
 - (void)initialize:(CGPoint)pos Vel:(CGPoint)vel
 {
   vel_ = vel;
+  velOffset_ = CGPointMake(0.f, 0.f);
   rotVelDeg_ = 0.f;
   
   self.position = pos;
@@ -64,6 +65,10 @@ const float kRotAccDeg = 30.f;
   
   // 速度更新
   {
+    // 補正値適用
+    vel_ = CGPointAdd(vel_, velOffset_);
+    velOffset_ = CGPointMake(0.f, 0.f);
+    
     // 回転による加速
     CGPoint accByRot;
     {
@@ -92,10 +97,11 @@ const float kRotAccDeg = 30.f;
 
 - (void)informCollisionBegin:(CCPhysicsCollisionPair *)pair Node:(CCNode *)node
 {
+  // 補正値更新
   const CGPoint normal = pair.contacts.normal;
   const float dot = CGPointDot(vel_, normal);
-  vel_.x += -normal.x * dot * 2;
-  vel_.y += -normal.y * dot * 2;
+  CGPoint velOffset = CGPointScale(normal, -dot * 2);
+  velOffset_ = CGPointAdd(velOffset_, velOffset);
   
   if ([node isMemberOfClass:[Block class]])
   {
