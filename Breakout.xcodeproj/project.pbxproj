@@ -202,6 +202,18 @@
 		3563EF2D195321990071AD77 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 3563EF2C195321990071AD77 /* AppDelegate.m */; };
 		3563EF30195321990071AD77 /* HelloWorldScene.m in Sources */ = {isa = PBXBuildFile; fileRef = 3563EF2F195321990071AD77 /* HelloWorldScene.m */; };
 		3563EF33195321990071AD77 /* IntroScene.m in Sources */ = {isa = PBXBuildFile; fileRef = 3563EF32195321990071AD77 /* IntroScene.m */; };
+		3563EF43195525F10071AD77 /* Ball.png in Resources */ = {isa = PBXBuildFile; fileRef = 3563EF42195525F10071AD77 /* Ball.png */; };
+		3563EF4A195529360071AD77 /* Block00.png in Resources */ = {isa = PBXBuildFile; fileRef = 3563EF44195529360071AD77 /* Block00.png */; };
+		3563EF4B195529360071AD77 /* Block01.png in Resources */ = {isa = PBXBuildFile; fileRef = 3563EF45195529360071AD77 /* Block01.png */; };
+		3563EF4C195529360071AD77 /* Block02.png in Resources */ = {isa = PBXBuildFile; fileRef = 3563EF46195529360071AD77 /* Block02.png */; };
+		3563EF4D195529370071AD77 /* Block03.png in Resources */ = {isa = PBXBuildFile; fileRef = 3563EF47195529360071AD77 /* Block03.png */; };
+		3563EF4E195529370071AD77 /* Block04.png in Resources */ = {isa = PBXBuildFile; fileRef = 3563EF48195529360071AD77 /* Block04.png */; };
+		3563EF4F195529370071AD77 /* Block05.png in Resources */ = {isa = PBXBuildFile; fileRef = 3563EF49195529360071AD77 /* Block05.png */; };
+		3563EF5119552B1A0071AD77 /* Background.png in Resources */ = {isa = PBXBuildFile; fileRef = 3563EF5019552B1A0071AD77 /* Background.png */; };
+		3563EF5819553FEB0071AD77 /* Bar.png in Resources */ = {isa = PBXBuildFile; fileRef = 3563EF5719553FEB0071AD77 /* Bar.png */; };
+		3563EF61195540C20071AD77 /* BlockMgr.m in Sources */ = {isa = PBXBuildFile; fileRef = 3563EF5E195540C20071AD77 /* BlockMgr.m */; };
+		3563EF62195540C20071AD77 /* GameScene.m in Sources */ = {isa = PBXBuildFile; fileRef = 3563EF60195540C20071AD77 /* GameScene.m */; };
+		3563EF6B1955448C0071AD77 /* Block.m in Sources */ = {isa = PBXBuildFile; fileRef = 3563EF6A1955448C0071AD77 /* Block.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -613,6 +625,22 @@
 		3563EF2F195321990071AD77 /* HelloWorldScene.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = HelloWorldScene.m; path = Classes/HelloWorldScene.m; sourceTree = "<group>"; };
 		3563EF31195321990071AD77 /* IntroScene.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = IntroScene.h; path = Classes/IntroScene.h; sourceTree = "<group>"; };
 		3563EF32195321990071AD77 /* IntroScene.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = IntroScene.m; path = Classes/IntroScene.m; sourceTree = "<group>"; };
+		3563EF42195525F10071AD77 /* Ball.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Ball.png; path = Resources/Images/Ball.png; sourceTree = "<group>"; };
+		3563EF44195529360071AD77 /* Block00.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Block00.png; path = Resources/Images/Block00.png; sourceTree = "<group>"; };
+		3563EF45195529360071AD77 /* Block01.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Block01.png; path = Resources/Images/Block01.png; sourceTree = "<group>"; };
+		3563EF46195529360071AD77 /* Block02.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Block02.png; path = Resources/Images/Block02.png; sourceTree = "<group>"; };
+		3563EF47195529360071AD77 /* Block03.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Block03.png; path = Resources/Images/Block03.png; sourceTree = "<group>"; };
+		3563EF48195529360071AD77 /* Block04.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Block04.png; path = Resources/Images/Block04.png; sourceTree = "<group>"; };
+		3563EF49195529360071AD77 /* Block05.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Block05.png; path = Resources/Images/Block05.png; sourceTree = "<group>"; };
+		3563EF5019552B1A0071AD77 /* Background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Background.png; path = Resources/Images/Background.png; sourceTree = "<group>"; };
+		3563EF5719553FEB0071AD77 /* Bar.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Bar.png; path = Resources/Images/Bar.png; sourceTree = "<group>"; };
+		3563EF5D195540C20071AD77 /* BlockMgr.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BlockMgr.h; path = Classes/Game/BlockMgr.h; sourceTree = "<group>"; };
+		3563EF5E195540C20071AD77 /* BlockMgr.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BlockMgr.m; path = Classes/Game/BlockMgr.m; sourceTree = "<group>"; };
+		3563EF5F195540C20071AD77 /* GameScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GameScene.h; path = Classes/Game/GameScene.h; sourceTree = "<group>"; };
+		3563EF60195540C20071AD77 /* GameScene.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GameScene.m; path = Classes/Game/GameScene.m; sourceTree = "<group>"; };
+		3563EF691955448C0071AD77 /* Block.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Block.h; path = Classes/Game/Block.h; sourceTree = "<group>"; };
+		3563EF6A1955448C0071AD77 /* Block.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Block.m; path = Classes/Game/Block.m; sourceTree = "<group>"; };
+		3563EF7319554D350071AD77 /* GameDef.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = GameDef.h; path = Classes/Game/GameDef.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -686,6 +714,7 @@
 		3563ECCC195321940071AD77 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				3563EF41195525C50071AD77 /* Images */,
 				3563ECCD195321940071AD77 /* Default.png */,
 				3563ECCF195321940071AD77 /* Default@2x.png */,
 				3563ECD1195321940071AD77 /* Default-568h@2x.png */,
@@ -1423,6 +1452,7 @@
 		3563EF2A195321990071AD77 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				3563EF5C195540930071AD77 /* Game */,
 				3563EF2B195321990071AD77 /* AppDelegate.h */,
 				3563EF2C195321990071AD77 /* AppDelegate.m */,
 				3563EF2E195321990071AD77 /* HelloWorldScene.h */,
@@ -1431,6 +1461,36 @@
 				3563EF32195321990071AD77 /* IntroScene.m */,
 			);
 			name = Classes;
+			sourceTree = "<group>";
+		};
+		3563EF41195525C50071AD77 /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				3563EF5719553FEB0071AD77 /* Bar.png */,
+				3563EF5019552B1A0071AD77 /* Background.png */,
+				3563EF44195529360071AD77 /* Block00.png */,
+				3563EF45195529360071AD77 /* Block01.png */,
+				3563EF46195529360071AD77 /* Block02.png */,
+				3563EF47195529360071AD77 /* Block03.png */,
+				3563EF48195529360071AD77 /* Block04.png */,
+				3563EF49195529360071AD77 /* Block05.png */,
+				3563EF42195525F10071AD77 /* Ball.png */,
+			);
+			name = Images;
+			sourceTree = "<group>";
+		};
+		3563EF5C195540930071AD77 /* Game */ = {
+			isa = PBXGroup;
+			children = (
+				3563EF7319554D350071AD77 /* GameDef.h */,
+				3563EF691955448C0071AD77 /* Block.h */,
+				3563EF6A1955448C0071AD77 /* Block.m */,
+				3563EF5D195540C20071AD77 /* BlockMgr.h */,
+				3563EF5E195540C20071AD77 /* BlockMgr.m */,
+				3563EF5F195540C20071AD77 /* GameScene.h */,
+				3563EF60195540C20071AD77 /* GameScene.m */,
+			);
+			name = Game;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -1510,17 +1570,26 @@
 				3563ECD7195321940071AD77 /* Icon.png in Resources */,
 				3563ECE5195321950071AD77 /* Icon-iPad-Spotlight-iOS7@2x.png in Resources */,
 				3563ECD4195321940071AD77 /* Default-Landscape~ipad.png in Resources */,
+				3563EF5819553FEB0071AD77 /* Bar.png in Resources */,
+				3563EF4D195529370071AD77 /* Block03.png in Resources */,
+				3563EF4A195529360071AD77 /* Block00.png in Resources */,
 				3563ECE9195321950071AD77 /* Icon-Small.png in Resources */,
 				3563ECE7195321950071AD77 /* Icon-Small-50.png in Resources */,
+				3563EF4E195529370071AD77 /* Block04.png in Resources */,
 				3563EF25195321990071AD77 /* LICENSE_Chipmunk.txt in Resources */,
+				3563EF4C195529360071AD77 /* Block02.png in Resources */,
 				3563ECDB195321940071AD77 /* Icon-72.png in Resources */,
 				3563EEB7195321980071AD77 /* LICENSE_CCBReader.txt in Resources */,
+				3563EF43195525F10071AD77 /* Ball.png in Resources */,
 				3563EE27195321970071AD77 /* LICENSE_cocos2d.txt in Resources */,
 				3563ECD2195321940071AD77 /* Default-568h@2x.png in Resources */,
 				3563ECF2195321950071AD77 /* iTunesArtwork in Resources */,
 				3563ECED195321950071AD77 /* Icon-Spotlight-iOS7.png in Resources */,
+				3563EF4F195529370071AD77 /* Block05.png in Resources */,
 				3563ECE1195321940071AD77 /* Icon-76@2x.png in Resources */,
 				3563ECEF195321950071AD77 /* Icon-Spotlight-iOS7@2x.png in Resources */,
+				3563EF4B195529360071AD77 /* Block01.png in Resources */,
+				3563EF5119552B1A0071AD77 /* Background.png in Resources */,
 				3563ECDF195321940071AD77 /* Icon-76.png in Resources */,
 				3563ECF4195321950071AD77 /* iTunesArtwork@2x in Resources */,
 			);
@@ -1555,11 +1624,13 @@
 				3563ED06195321950071AD77 /* CCEffect.m in Sources */,
 				3563EEA4195321980071AD77 /* CCBAnimationManager.m in Sources */,
 				3563EE12195321970071AD77 /* CCVertex.m in Sources */,
+				3563EF61195540C20071AD77 /* BlockMgr.m in Sources */,
 				3563EF30195321990071AD77 /* HelloWorldScene.m in Sources */,
 				3563ED46195321950071AD77 /* CCAnimationCache.m in Sources */,
 				3563EE00195321970071AD77 /* base64.c in Sources */,
 				3563ED89195321960071AD77 /* CCParticleSystemBase.m in Sources */,
 				3563EDEE195321970071AD77 /* UITouch+CC.m in Sources */,
+				3563EF62195540C20071AD77 /* GameScene.m in Sources */,
 				3563EE88195321980071AD77 /* CCButton.m in Sources */,
 				3563ED7A195321960071AD77 /* CCParallaxNode.m in Sources */,
 				3563EE0D195321970071AD77 /* ccUtils.c in Sources */,
@@ -1576,6 +1647,7 @@
 				3563EE1B195321970071AD77 /* NSThread+performBlock.m in Sources */,
 				3563EDB8195321960071AD77 /* CCSpriteBatchNode.m in Sources */,
 				3563ED08195321950071AD77 /* CCEffectBrightness.m in Sources */,
+				3563EF6B1955448C0071AD77 /* Block.m in Sources */,
 				3563EE3D195321970071AD77 /* OALAudioTrackNotifications.m in Sources */,
 				3563EE04195321970071AD77 /* CCFileUtils.m in Sources */,
 				3563ED29195321950071AD77 /* CCAction.m in Sources */,
