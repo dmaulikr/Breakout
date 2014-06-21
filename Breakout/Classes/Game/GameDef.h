@@ -23,4 +23,14 @@ enum
   kTeamBlockNum = kTeamBlockRowNum * kTeamBlockColNum,
 };
 
+enum
+{
+  kBallNum = 5,
+};
+
+extern const float kBlockWidth;
+extern const float kBlockHeight;
+extern const float kBarWidth;
+extern const float kBarHeight;
+
 #endif

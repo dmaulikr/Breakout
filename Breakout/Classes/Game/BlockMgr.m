@@ -29,19 +29,19 @@
 
 //------------------------------------------------------------------------------
 
-- (void)createBlocks:(CCScene *)scene
+- (void)createBlocks:(CCNode *)parentNode
 {
   for (int i = 0; i < kTeamBlockNum; ++i)
   {
     Block* block = [[Block alloc] initWithTeam:kAlfa Index:i];
-    [scene addChild:block];
+    [parentNode addChild:block];
     [alfaBlockList_ addObject:block];
   }
   
   for (int i = 0; i < kTeamBlockNum; ++i)
   {
     Block* block = [[Block alloc] initWithTeam:kBravo Index:i];
-    [scene addChild:block];
+    [parentNode addChild:block];
     [bravoBlockList_ addObject:block];
   }
 }

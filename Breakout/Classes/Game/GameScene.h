@@ -10,10 +10,15 @@
 #import "cocos2d.h"
 
 @class BlockMgr;
+@class BallMgr;
+@class BarMgr;
 
-@interface GameScene : CCScene {
+@interface GameScene : CCScene <CCPhysicsCollisionDelegate> {
  @private
-  BlockMgr* blockMgr_;
+  BlockMgr*       blockMgr_;
+  BallMgr*        ballMgr_;
+  BarMgr*         barMgr_;
+  CCPhysicsNode*  physicsNode_;
 }
 
 + (GameScene *)scene;

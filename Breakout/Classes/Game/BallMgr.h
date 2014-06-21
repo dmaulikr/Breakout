@@ -1,5 +1,5 @@
 //
-//  BlockMgr.h
+//  BallMgr.h
 //  Breakout
 //
 //  Created by 筒井 啓太 on 2014/06/21.
@@ -9,15 +9,16 @@
 #import <Foundation/Foundation.h>
 
 @class CCNode;
+@class Ball;
 
-@interface BlockMgr : NSObject
+@interface BallMgr : NSObject
 {
  @private
-  NSMutableArray*  alfaBlockList_;
-  NSMutableArray*  bravoBlockList_;
+  NSMutableArray* ballList_;
 }
 
 - (id)init;
-- (void)createBlocks:(CCNode *)parentNode;
+- (void)createBalls;
+- (Ball *)activateOne:(CCNode *)parentNode;
 
 @end

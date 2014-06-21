@@ -14,8 +14,8 @@
 
 //------------------------------------------------------------------------------
 
-const float kWidth = 32.f;
-const float kHeight = 20.f;
+const float kBlockWidth = 32.f;
+const float kBlockHeight = 20.f;
 
 //------------------------------------------------------------------------------
 
@@ -32,6 +32,11 @@ const float kHeight = 20.f;
   self.position = [self calcPos:team_ Index:index_];
   if (team == kBravo) self.rotation = 180.f;
   
+  // 物理
+  self.physicsBody = [CCPhysicsBody bodyWithRect:self.spriteFrame.rect cornerRadius:0.f];
+  self.physicsBody.collisionType = @"Block";
+  self.physicsBody.type = CCPhysicsBodyTypeStatic;
+  
   return self;
 }
 
@@ -43,14 +48,14 @@ const float kHeight = 20.f;
   const int col = index % kTeamBlockColNum;
   
   const CGPoint offset = (team == kAlfa) ?
-                         ccp(kWidth, -kHeight) :
-                         ccp(-kWidth, kHeight);
+                         ccp(kBlockWidth, -kBlockHeight) :
+                         ccp(-kBlockWidth, kBlockHeight);
   
   const GameScene* scene = (GameScene*)[[CCDirector sharedDirector] runningScene];
   
   const CGPoint basePos = (team == kAlfa) ?
-                          ccp(kWidth * 0.5f, kHeight * (kTeamBlockRowNum - 0.5f)) :
-                          ccp(scene.contentSize.width - (kWidth * 0.5f), scene.contentSize.height - (kHeight * (kTeamBlockRowNum - 0.5f)));
+                          ccp(kBlockWidth * 0.5f, kBlockHeight * (kTeamBlockRowNum - 0.5f)) :
+                          ccp(scene.contentSize.width - (kBlockWidth * 0.5f), scene.contentSize.height - (kBlockHeight * (kTeamBlockRowNum - 0.5f)));
   
   CGPoint pos = basePos;
   pos.x += offset.x * col;

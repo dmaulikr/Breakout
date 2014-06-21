@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		355DCA2D19557A6A00A8B9A9 /* Ball.m in Sources */ = {isa = PBXBuildFile; fileRef = 355DCA2C19557A6A00A8B9A9 /* Ball.m */; };
+		355DCA3019557AA800A8B9A9 /* BallMgr.m in Sources */ = {isa = PBXBuildFile; fileRef = 355DCA2F19557AA800A8B9A9 /* BallMgr.m */; };
+		355DCA3619558FF000A8B9A9 /* BPGeometry.m in Sources */ = {isa = PBXBuildFile; fileRef = 355DCA3519558FF000A8B9A9 /* BPGeometry.m */; };
+		355DCA3919559FDB00A8B9A9 /* Bar.m in Sources */ = {isa = PBXBuildFile; fileRef = 355DCA3819559FDB00A8B9A9 /* Bar.m */; };
+		355DCA3C1955B12600A8B9A9 /* InvisibleButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 355DCA3B1955B12600A8B9A9 /* InvisibleButton.m */; };
+		355DCA3F1955B76600A8B9A9 /* BarMgr.m in Sources */ = {isa = PBXBuildFile; fileRef = 355DCA3E1955B76600A8B9A9 /* BarMgr.m */; };
 		3563ECB2195321940071AD77 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3563ECB1195321940071AD77 /* QuartzCore.framework */; };
 		3563ECB4195321940071AD77 /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3563ECB3195321940071AD77 /* OpenGLES.framework */; };
 		3563ECB6195321940071AD77 /* OpenAL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3563ECB5195321940071AD77 /* OpenAL.framework */; };
@@ -227,6 +233,18 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		355DCA2B19557A6A00A8B9A9 /* Ball.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Ball.h; path = Classes/Game/Ball.h; sourceTree = "<group>"; };
+		355DCA2C19557A6A00A8B9A9 /* Ball.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Ball.m; path = Classes/Game/Ball.m; sourceTree = "<group>"; };
+		355DCA2E19557AA800A8B9A9 /* BallMgr.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BallMgr.h; path = Classes/Game/BallMgr.h; sourceTree = "<group>"; };
+		355DCA2F19557AA800A8B9A9 /* BallMgr.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BallMgr.m; path = Classes/Game/BallMgr.m; sourceTree = "<group>"; };
+		355DCA3419558FF000A8B9A9 /* BPGeometry.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BPGeometry.h; sourceTree = "<group>"; };
+		355DCA3519558FF000A8B9A9 /* BPGeometry.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BPGeometry.m; sourceTree = "<group>"; };
+		355DCA3719559FDB00A8B9A9 /* Bar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Bar.h; sourceTree = "<group>"; };
+		355DCA3819559FDB00A8B9A9 /* Bar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Bar.m; sourceTree = "<group>"; };
+		355DCA3A1955B12600A8B9A9 /* InvisibleButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InvisibleButton.h; sourceTree = "<group>"; };
+		355DCA3B1955B12600A8B9A9 /* InvisibleButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InvisibleButton.m; sourceTree = "<group>"; };
+		355DCA3D1955B76600A8B9A9 /* BarMgr.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BarMgr.h; sourceTree = "<group>"; };
+		355DCA3E1955B76600A8B9A9 /* BarMgr.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BarMgr.m; sourceTree = "<group>"; };
 		3563ECAE195321940071AD77 /* Breakout.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Breakout.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3563ECB1195321940071AD77 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		3563ECB3195321940071AD77 /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
@@ -1459,6 +1477,8 @@
 				3563EF2F195321990071AD77 /* HelloWorldScene.m */,
 				3563EF31195321990071AD77 /* IntroScene.h */,
 				3563EF32195321990071AD77 /* IntroScene.m */,
+				355DCA3419558FF000A8B9A9 /* BPGeometry.h */,
+				355DCA3519558FF000A8B9A9 /* BPGeometry.m */,
 			);
 			name = Classes;
 			sourceTree = "<group>";
@@ -1487,8 +1507,18 @@
 				3563EF6A1955448C0071AD77 /* Block.m */,
 				3563EF5D195540C20071AD77 /* BlockMgr.h */,
 				3563EF5E195540C20071AD77 /* BlockMgr.m */,
+				355DCA2B19557A6A00A8B9A9 /* Ball.h */,
+				355DCA2C19557A6A00A8B9A9 /* Ball.m */,
 				3563EF5F195540C20071AD77 /* GameScene.h */,
 				3563EF60195540C20071AD77 /* GameScene.m */,
+				355DCA2E19557AA800A8B9A9 /* BallMgr.h */,
+				355DCA2F19557AA800A8B9A9 /* BallMgr.m */,
+				355DCA3719559FDB00A8B9A9 /* Bar.h */,
+				355DCA3819559FDB00A8B9A9 /* Bar.m */,
+				355DCA3A1955B12600A8B9A9 /* InvisibleButton.h */,
+				355DCA3B1955B12600A8B9A9 /* InvisibleButton.m */,
+				355DCA3D1955B76600A8B9A9 /* BarMgr.h */,
+				355DCA3E1955B76600A8B9A9 /* BarMgr.m */,
 			);
 			name = Game;
 			sourceTree = "<group>";
@@ -1615,6 +1645,7 @@
 				3563EE43195321970071AD77 /* OALSimpleAudio.m in Sources */,
 				3563EDAB195321960071AD77 /* CCScene.m in Sources */,
 				3563EDD3195321970071AD77 /* CCTiledMapObjectGroup.m in Sources */,
+				355DCA3919559FDB00A8B9A9 /* Bar.m in Sources */,
 				3563EE25195321970071AD77 /* ZipUtils.m in Sources */,
 				3563ED25195321950071AD77 /* CCCache.m in Sources */,
 				3563EE7E195321980071AD77 /* OALAudioFile.m in Sources */,
@@ -1649,6 +1680,7 @@
 				3563ED08195321950071AD77 /* CCEffectBrightness.m in Sources */,
 				3563EF6B1955448C0071AD77 /* Block.m in Sources */,
 				3563EE3D195321970071AD77 /* OALAudioTrackNotifications.m in Sources */,
+				355DCA3F1955B76600A8B9A9 /* BarMgr.m in Sources */,
 				3563EE04195321970071AD77 /* CCFileUtils.m in Sources */,
 				3563ED29195321950071AD77 /* CCAction.m in Sources */,
 				3563EE63195321980071AD77 /* ALWrapper.m in Sources */,
@@ -1689,6 +1721,7 @@
 				3563EDB5195321960071AD77 /* CCSprite9Slice.m in Sources */,
 				3563EDF5195321970071AD77 /* CCDirectorMac.m in Sources */,
 				3563EE8B195321980071AD77 /* CCControl.m in Sources */,
+				355DCA3C1955B12600A8B9A9 /* InvisibleButton.m in Sources */,
 				3563ED85195321960071AD77 /* CCParticleSystem.m in Sources */,
 				3563ED81195321960071AD77 /* CCParticleExamples.m in Sources */,
 				3563ED4D195321950071AD77 /* CCConfiguration.m in Sources */,
@@ -1696,8 +1729,10 @@
 				3563ED2C195321950071AD77 /* CCActionCatmullRom.m in Sources */,
 				3563EDBE195321960071AD77 /* CCSpriteFrameCache.m in Sources */,
 				3563ED49195321950071AD77 /* CCClippingNode.m in Sources */,
+				355DCA3619558FF000A8B9A9 /* BPGeometry.m in Sources */,
 				3563EE74195321980071AD77 /* mach_timing.c in Sources */,
 				3563EDAE195321960071AD77 /* CCScheduler.m in Sources */,
+				355DCA2D19557A6A00A8B9A9 /* Ball.m in Sources */,
 				3563EDCC195321970071AD77 /* CCTiledMap.m in Sources */,
 				3563ED0E195321950071AD77 /* CCEffectColorPulse.m in Sources */,
 				3563EDA4195321960071AD77 /* CCResponder.m in Sources */,
@@ -1716,6 +1751,7 @@
 				3563ED51195321950071AD77 /* CCDirector.m in Sources */,
 				3563ED2F195321950071AD77 /* CCActionEase.m in Sources */,
 				3563ED10195321950071AD77 /* CCEffectGlow.m in Sources */,
+				355DCA3019557AA800A8B9A9 /* BallMgr.m in Sources */,
 				3563EE5C195321970071AD77 /* ALSoundSourcePool.m in Sources */,
 				3563EEA7195321980071AD77 /* CCBKeyframe.m in Sources */,
 				3563ED5D195321960071AD77 /* CCLabelBMFont.m in Sources */,
@@ -1931,6 +1967,7 @@
 				3563EF38195321990071AD77 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		3563EF39195321990071AD77 /* Build configuration list for PBXNativeTarget "Breakout" */ = {
 			isa = XCConfigurationList;
@@ -1939,6 +1976,7 @@
 				3563EF3B195321990071AD77 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
