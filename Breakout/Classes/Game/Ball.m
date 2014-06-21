@@ -9,11 +9,20 @@
 #import "Ball.h"
 #import "GameScene.h"
 #import "Block.h"
+#import "Bar.h"
 
 #import "BPGeometry.h"
 
 
 @implementation Ball
+
+//------------------------------------------------------------------------------
+
+const float kMaxRotVelDeg = 30.f;
+const float kRotVelKd = 0.96f;
+const float kBallVel = 14.f;
+const float kAccByRot = 1.f;
+const float kRotAccDeg = 30.f;
 
 //------------------------------------------------------------------------------
 
@@ -43,6 +52,39 @@
 
 - (void)update:(CCTime)delta
 {
+  // 回転速度更新
+  {
+    // ダンパ
+    rotVelDeg_ *= kRotVelKd;
+    
+    // クランプ
+    if (rotVelDeg_ > kMaxRotVelDeg) rotVelDeg_ = kMaxRotVelDeg;
+    else if ( rotVelDeg_ < -kMaxRotVelDeg) rotVelDeg_ = -kMaxRotVelDeg;
+  }
+  
+  // 速度更新
+  {
+    // 回転による加速
+    CGPoint accByRot;
+    {
+      CGPoint accDir = CGPointMake(-vel_.y, vel_.x);
+      accDir = CGPointNormalize(accDir);
+      
+      const float rotRate = rotVelDeg_ / kMaxRotVelDeg;
+      const float acc = kAccByRot * rotRate;
+      
+      accByRot = CGPointMake(accDir.x * acc, accDir.y * acc);
+    }
+    
+    // 加速
+    vel_ = CGPointAdd(vel_, accByRot);
+    
+    // 速度調整
+    const CGPoint normalizedVel = CGPointNormalize(vel_);
+    vel_ = CGPointMake(normalizedVel.x * kBallVel, normalizedVel.y * kBallVel);
+  }
+
+  // 位置更新
   [self setPosition:ccp(self.position.x + vel_.x, self.position.y + vel_.y)];
 }
 
@@ -59,6 +101,20 @@
   {
     Block* block = (Block *)node;
     [block removeFromParent];
+  }
+  else if ([node isMemberOfClass:[Bar class]])
+  {
+    Bar* bar = (Bar *)node;
+    const CGPoint barVel = ccp(bar.vel, 0.f);
+    const float dot = CGPointDot(barVel, normal);
+    const CGPoint barVelNormal = CGPointScale(normal, dot);
+    const CGPoint barVelVertical = CGPointSubtract(barVel, barVelNormal);
+    const double cross = CGPointCross(normal, barVelVertical);
+    const double magnitude = CGPointMagnitude(barVelVertical);
+    const double barVelRate = magnitude / [bar maxVel];
+    const float rotAccDeg = kRotAccDeg * (barVelRate * barVelRate);
+    if (cross > 0.f) rotVelDeg_ += rotAccDeg;
+    else if (cross < 0.f) rotVelDeg_ -= rotAccDeg;
   }
 }
 

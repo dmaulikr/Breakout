@@ -19,5 +19,7 @@
 - (id)initWithTeam:(Team)team;
 - (void)accRight;
 - (void)accLeft;
+- (float)vel;
+- (float)maxVel;
 
 @end

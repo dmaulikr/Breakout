@@ -58,7 +58,7 @@
   ballMgr_ = [[BallMgr alloc] init];
   [ballMgr_ createBalls];
   Ball* ball = [ballMgr_ activateOne:physicsNode_];
-  [ball initialize:ccp(self.contentSize.width / 2, self.contentSize.height / 2) Vel:ccp(-10.f, -10.f)];
+  [ball initialize:ccp(self.contentSize.width / 2, self.contentSize.height / 2) Vel:ccp(0.f, -10.f)];
   
   // バー
   barMgr_ = [[BarMgr alloc] init];
