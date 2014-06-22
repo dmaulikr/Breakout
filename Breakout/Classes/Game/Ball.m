@@ -108,7 +108,7 @@ const float kRotAccDeg = 30.f;
   if ([node isMemberOfClass:[Block class]])
   {
     Block* block = (Block *)node;
-    [block removeFromParent];
+    [block fade];
   }
   else if ([node isMemberOfClass:[Bar class]])
   {

@@ -29,6 +29,7 @@ const float kBlockHeight = 20.f;
   team_ = team;
   index_ = index;
   type_ = type;
+  isFadeRequest_ = NO;
   self.position = [self calcPos:team_ Index:index_];
   if (team == kBravo) self.rotation = 180.f;
   
@@ -38,6 +39,22 @@ const float kBlockHeight = 20.f;
   self.physicsBody.type = CCPhysicsBodyTypeStatic;
   
   return self;
+}
+
+//------------------------------------------------------------------------------
+
+- (void)fade
+{
+  if (isFadeRequest_)
+  {
+    return;
+  }
+  
+  isFadeRequest_ = YES;
+  
+  const CCActionFadeOut* fadeOut = [CCActionFadeOut actionWithDuration:0.25f];
+  const CCActionRemove* remove = [CCActionRemove action];
+  [self runAction:[CCActionSequence actionWithArray:@[fadeOut, remove]]];
 }
 
 //------------------------------------------------------------------------------
@@ -62,6 +79,12 @@ const float kBlockHeight = 20.f;
   pos.y += offset.y * row;
   
   return pos;
+}
+
+//------------------------------------------------------------------------------
+
+- (void)update:(CCTime)delta
+{
 }
 
 //------------------------------------------------------------------------------

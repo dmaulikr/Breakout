@@ -21,8 +21,10 @@
   Team  team_;
   int   index_;
   int   type_;
+  BOOL  isFadeRequest_;
 }
 
 - (id)initWithTeam:(Team)team Index:(int)index;
+- (void)fade;
 
 @end
