@@ -12,12 +12,14 @@
 @class BlockMgr;
 @class BallMgr;
 @class BarMgr;
+@class Field;
 
 @interface GameScene : CCScene <CCPhysicsCollisionDelegate> {
  @private
   BlockMgr*       blockMgr_;
   BallMgr*        ballMgr_;
   BarMgr*         barMgr_;
+  Field*          field_;
   CCPhysicsNode*  physicsNode_;
 }
 

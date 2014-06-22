@@ -11,6 +11,7 @@
 #import "BallMgr.h"
 #import "Ball.h"
 #import "BarMgr.h"
+#import "Field.h"
 
 //------------------------------------------------------------------------------
 #pragma mark - GameScene
@@ -46,9 +47,11 @@
   // 背景
   CCSprite* background = [CCSprite spriteWithImageNamed:@"Background.png"];
   background.position = ccp(self.contentSize.width / 2, self.contentSize.height / 2);
-  background.physicsBody = [CCPhysicsBody bodyWithPolylineFromRect:background.spriteFrame.rect cornerRadius:0.f];
-  background.physicsBody.collisionType = @"Background";
   [physicsNode_ addChild:background];
+
+  // メインフィールド
+  field_ = [[Field alloc] init];
+  [field_ createField:physicsNode_];
   
   // ブロック
   blockMgr_ = [[BlockMgr alloc] init];

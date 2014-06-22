@@ -19,8 +19,8 @@
 //------------------------------------------------------------------------------
 
 const float kMaxRotVelDeg = 30.f;
-const float kRotVelKd = 0.97f;
-const float kBallVel = 15.f;
+const float kRotVelKd = 0.98f;
+const float kBallVel = 18.f;
 const float kAccByRot = 1.f;
 const float kRotAccDeg = 30.f;
 
@@ -86,7 +86,7 @@ const float kRotAccDeg = 30.f;
     
     // 速度調整
     const CGPoint normalizedVel = CGPointNormalize(vel_);
-    vel_ = CGPointMake(normalizedVel.x * kBallVel, normalizedVel.y * kBallVel);
+    vel_ = CGPointScale(normalizedVel, kBallVel);
   }
 
   // 位置更新
@@ -102,6 +102,8 @@ const float kRotAccDeg = 30.f;
   const float dot = CGPointDot(vel_, normal);
   CGPoint velOffset = CGPointScale(normal, -dot * 2);
   velOffset_ = CGPointAdd(velOffset_, velOffset);
+  
+  // NSLog(@"normal: (%f, %f)", normal.x, normal.y);
   
   if ([node isMemberOfClass:[Block class]])
   {

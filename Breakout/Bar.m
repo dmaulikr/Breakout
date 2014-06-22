@@ -19,7 +19,7 @@ const float kBarHeight = 12.f;
 
 //------------------------------------------------------------------------------
 
-const float kVel = 16.f;
+const float kVel = 17.f;
 const float kAcc = 5.f;
 const float kKd = 0.75f;
 

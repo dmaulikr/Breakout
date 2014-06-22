@@ -13,6 +13,7 @@
 		355DCA3919559FDB00A8B9A9 /* Bar.m in Sources */ = {isa = PBXBuildFile; fileRef = 355DCA3819559FDB00A8B9A9 /* Bar.m */; };
 		355DCA3C1955B12600A8B9A9 /* InvisibleButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 355DCA3B1955B12600A8B9A9 /* InvisibleButton.m */; };
 		355DCA3F1955B76600A8B9A9 /* BarMgr.m in Sources */ = {isa = PBXBuildFile; fileRef = 355DCA3E1955B76600A8B9A9 /* BarMgr.m */; };
+		355DCA42195682C800A8B9A9 /* Field.m in Sources */ = {isa = PBXBuildFile; fileRef = 355DCA41195682C800A8B9A9 /* Field.m */; };
 		3563ECB2195321940071AD77 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3563ECB1195321940071AD77 /* QuartzCore.framework */; };
 		3563ECB4195321940071AD77 /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3563ECB3195321940071AD77 /* OpenGLES.framework */; };
 		3563ECB6195321940071AD77 /* OpenAL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3563ECB5195321940071AD77 /* OpenAL.framework */; };
@@ -245,6 +246,8 @@
 		355DCA3B1955B12600A8B9A9 /* InvisibleButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InvisibleButton.m; sourceTree = "<group>"; };
 		355DCA3D1955B76600A8B9A9 /* BarMgr.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BarMgr.h; sourceTree = "<group>"; };
 		355DCA3E1955B76600A8B9A9 /* BarMgr.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BarMgr.m; sourceTree = "<group>"; };
+		355DCA40195682C700A8B9A9 /* Field.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Field.h; sourceTree = "<group>"; };
+		355DCA41195682C800A8B9A9 /* Field.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Field.m; sourceTree = "<group>"; };
 		3563ECAE195321940071AD77 /* Breakout.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Breakout.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3563ECB1195321940071AD77 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		3563ECB3195321940071AD77 /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
@@ -1519,6 +1522,8 @@
 				355DCA3B1955B12600A8B9A9 /* InvisibleButton.m */,
 				355DCA3D1955B76600A8B9A9 /* BarMgr.h */,
 				355DCA3E1955B76600A8B9A9 /* BarMgr.m */,
+				355DCA40195682C700A8B9A9 /* Field.h */,
+				355DCA41195682C800A8B9A9 /* Field.m */,
 			);
 			name = Game;
 			sourceTree = "<group>";
@@ -1766,6 +1771,7 @@
 				3563EF2D195321990071AD77 /* AppDelegate.m in Sources */,
 				3563EDE4195321970071AD77 /* CCDirectorIOS.m in Sources */,
 				3563ED7E195321960071AD77 /* CCParticleBatchNode.m in Sources */,
+				355DCA42195682C800A8B9A9 /* Field.m in Sources */,
 				3563EE18195321970071AD77 /* NSAttributedString+CCAdditions.m in Sources */,
 				3563EF29195321990071AD77 /* main.m in Sources */,
 				3563EF33195321990071AD77 /* IntroScene.m in Sources */,
