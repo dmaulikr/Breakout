@@ -55,6 +55,16 @@ const float kRotAccDeg = 30.f;
 
 //------------------------------------------------------------------------------
 
+- (void)initializeRandom
+{
+  const CGSize size = [[CCDirector sharedDirector] viewSize];
+  const CGPoint pos = ccp(size.width / 2, size.height / 2);
+  const CGPoint vel = ccp(0.f, (random() % 2 == 0 ) ? -10.f : 10.f);
+  [self initialize:pos Vel:vel];
+}
+
+//------------------------------------------------------------------------------
+
 - (void)update:(CCTime)delta
 {
   // 回転速度更新
@@ -98,6 +108,12 @@ const float kRotAccDeg = 30.f;
   
   // モーション
   motionStreak_.position = self.position;
+  
+  // 場外
+  if (![self isInside])
+  {
+    [self initializeRandom];
+  }
 }
 
 //------------------------------------------------------------------------------
@@ -160,6 +176,20 @@ const float kRotAccDeg = 30.f;
 - (CCMotionStreak *)motionStreak
 {
   return motionStreak_;
+}
+
+//------------------------------------------------------------------------------
+
+- (BOOL)isInside
+{
+  const CGSize size = [[CCDirector sharedDirector] viewSize];
+  
+  if (self.position.x < -200.f) return NO;
+  if (self.position.x > size.width + 200.f) return NO;
+  if (self.position.y < -200.f) return NO;
+  if (self.position.y > size.height + 200.f) return NO;
+  
+  return YES;
 }
 
 //------------------------------------------------------------------------------
