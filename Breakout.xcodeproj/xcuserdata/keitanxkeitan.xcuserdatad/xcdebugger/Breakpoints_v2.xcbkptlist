@@ -10,11 +10,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Breakout/Classes/Game/Block.h"
-            timestampString = "425020509.420064"
+            timestampString = "425104269.046423"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "18"
-            endingLineNumber = "18"
+            startingLineNumber = "20"
+            endingLineNumber = "20"
             landmarkName = "@interface Block"
             landmarkType = "2">
          </BreakpointContent>

@@ -7,7 +7,7 @@
 //
 
 #import "Block.h"
-#import "GameScene.h"
+#import "BlockMgr.h"
 
 
 @implementation Block
@@ -19,7 +19,7 @@ const float kBlockHeight = 20.f;
 
 //------------------------------------------------------------------------------
 
-- (id)initWithTeam:(Team)team Index:(int)index
+- (id)initWithTeam:(Team)team Index:(int)index ParentMgr:(BlockMgr *)parentMgr;
 {
   const int type = rand() % kTypeNum;
   
@@ -30,6 +30,7 @@ const float kBlockHeight = 20.f;
   index_ = index;
   type_ = type;
   isFadeRequest_ = NO;
+  parentMgr_ = parentMgr;
   self.position = [self calcPos:team_ Index:index_];
   if (team == kBravo) self.rotation = 180.f;
   
@@ -55,6 +56,9 @@ const float kBlockHeight = 20.f;
   const CCActionFadeOut* fadeOut = [CCActionFadeOut actionWithDuration:0.25f];
   const CCActionRemove* remove = [CCActionRemove action];
   [self runAction:[CCActionSequence actionWithArray:@[fadeOut, remove]]];
+  
+  if (team_ == kAlfa) [parentMgr_ decreaseAlfaBlockNum];
+  else [parentMgr_ decreaseBravoBlockNum];
 }
 
 //------------------------------------------------------------------------------
@@ -68,11 +72,11 @@ const float kBlockHeight = 20.f;
                          ccp(kBlockWidth, -kBlockHeight) :
                          ccp(-kBlockWidth, kBlockHeight);
   
-  const GameScene* scene = (GameScene*)[[CCDirector sharedDirector] runningScene];
+  const CGSize size = [[CCDirector sharedDirector] viewSize];
   
   const CGPoint basePos = (team == kAlfa) ?
                           ccp(kBlockWidth * 0.5f, kBlockHeight * (kTeamBlockRowNum - 0.5f)) :
-                          ccp(scene.contentSize.width - (kBlockWidth * 0.5f), scene.contentSize.height - (kBlockHeight * (kTeamBlockRowNum - 0.5f)));
+                          ccp(size.width - (kBlockWidth * 0.5f), size.height - (kBlockHeight * (kTeamBlockRowNum - 0.5f)));
   
   CGPoint pos = basePos;
   pos.x += offset.x * col;

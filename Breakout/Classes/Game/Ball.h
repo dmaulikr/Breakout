@@ -14,10 +14,12 @@
   CGPoint vel_;
   CGPoint velOffset_;
   float   rotVelDeg_;
+  BOOL    isFadeRequest_;
 }
 
 - (id)init;
 - (void)initialize:(CGPoint)pos Vel:(CGPoint)vel;
 - (void)informCollisionBegin:(CCPhysicsCollisionPair *)pair Node:(CCNode *)node;
+- (void)fade;
 
 @end

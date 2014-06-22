@@ -11,6 +11,8 @@
 
 #import "GameDef.h"
 
+@class BlockMgr;
+
 @interface Block : CCSprite {
  @private
   enum
@@ -18,13 +20,14 @@
     kTypeNum  = 6,
   };
   
-  Team  team_;
-  int   index_;
-  int   type_;
-  BOOL  isFadeRequest_;
+  Team      team_;
+  int       index_;
+  int       type_;
+  BOOL      isFadeRequest_;
+  BlockMgr* parentMgr_;
 }
 
-- (id)initWithTeam:(Team)team Index:(int)index;
+- (id)initWithTeam:(Team)team Index:(int)index ParentMgr:(BlockMgr *)parentMgr;
 - (void)fade;
 
 @end

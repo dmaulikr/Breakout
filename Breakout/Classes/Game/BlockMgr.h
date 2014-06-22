@@ -13,11 +13,19 @@
 @interface BlockMgr : NSObject
 {
  @private
-  NSMutableArray*  alfaBlockList_;
-  NSMutableArray*  bravoBlockList_;
+  NSMutableArray* alfaBlockList_;
+  NSMutableArray* bravoBlockList_;
+  int             alfaBlockNum_;
+  int             bravoBlockNum_;
 }
 
 - (id)init;
 - (void)createBlocks:(CCNode *)parentNode;
+- (int)alfaBlockNum;
+- (int)bravoBlockNum;
+- (int)blockNum;
+- (int)brokenBlockNum;
+- (void)decreaseAlfaBlockNum;
+- (void)decreaseBravoBlockNum;
 
 @end

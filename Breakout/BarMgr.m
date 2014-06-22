@@ -36,12 +36,12 @@
   [parentNode addChild:bravoBar_];
   
   // ボタン
-  const GameScene* scene = (GameScene*)[[CCDirector sharedDirector] runningScene];
+  const CGSize size = [[CCDirector sharedDirector] viewSize];
   
-  const CGSize buttonSize = CGSizeMake(scene.contentSize.width / 2, scene.contentSize.height / 2);
+  const CGSize buttonSize = CGSizeMake(size.width / 2, size.height / 2);
   alfaRightButton_ = [[InvisibleButton alloc] init];
   [alfaRightButton_ setContentSize:buttonSize];
-  alfaRightButton_.position = ccp(scene.contentSize.width / 2, 0.f);
+  alfaRightButton_.position = ccp(size.width / 2, 0.f);
   [alfaRightButton_ setBarForRight:alfaBar_];
   [parentNode addChild:alfaRightButton_];
   
@@ -53,13 +53,13 @@
   
   bravoRightButton_ = [[InvisibleButton alloc] init];
   [bravoRightButton_ setContentSize:buttonSize];
-  bravoRightButton_.position = ccp(scene.contentSize.width / 2, scene.contentSize.height / 2);
+  bravoRightButton_.position = ccp(size.width / 2, size.height / 2);
   [bravoRightButton_ setBarForRight:bravoBar_];
   [parentNode addChild:bravoRightButton_];
   
   bravoLeftButton_ = [[InvisibleButton alloc] init];
   [bravoLeftButton_ setContentSize:buttonSize];
-  bravoLeftButton_.position = ccp(0.f, scene.contentSize.height / 2);
+  bravoLeftButton_.position = ccp(0.f, size.height / 2);
   [bravoLeftButton_ setBarForLeft:bravoBar_];
   [parentNode addChild:bravoLeftButton_];
 }

@@ -23,6 +23,8 @@
   
   alfaBlockList_ = [[NSMutableArray alloc] init];
   bravoBlockList_ = [[NSMutableArray alloc] init];
+  alfaBlockNum_ = 0;
+  bravoBlockNum_ = 0;
   
   return self;
 }
@@ -33,17 +35,61 @@
 {
   for (int i = 0; i < kTeamBlockNum; ++i)
   {
-    Block* block = [[Block alloc] initWithTeam:kAlfa Index:i];
+    Block* block = [[Block alloc] initWithTeam:kAlfa Index:i ParentMgr:self];
     [parentNode addChild:block];
     [alfaBlockList_ addObject:block];
   }
+  alfaBlockNum_ = kTeamBlockNum;
   
   for (int i = 0; i < kTeamBlockNum; ++i)
   {
-    Block* block = [[Block alloc] initWithTeam:kBravo Index:i];
+    Block* block = [[Block alloc] initWithTeam:kBravo Index:i ParentMgr:self];
     [parentNode addChild:block];
     [bravoBlockList_ addObject:block];
   }
+  bravoBlockNum_ = kTeamBlockNum;
+}
+
+//------------------------------------------------------------------------------
+
+- (int)alfaBlockNum
+{
+  return alfaBlockNum_;
+}
+
+//------------------------------------------------------------------------------
+
+- (int)bravoBlockNum
+{
+  return bravoBlockNum_;
+}
+
+//------------------------------------------------------------------------------
+
+- (int)blockNum
+{
+  return alfaBlockNum_ + bravoBlockNum_;
+}
+
+//------------------------------------------------------------------------------
+
+- (int)brokenBlockNum
+{
+  return kTeamBlockNum * 2 - self.blockNum;
+}
+
+//------------------------------------------------------------------------------
+
+- (void)decreaseAlfaBlockNum
+{
+  --alfaBlockNum_;
+}
+
+//------------------------------------------------------------------------------
+
+- (void)decreaseBravoBlockNum
+{
+  --bravoBlockNum_;
 }
 
 //------------------------------------------------------------------------------

@@ -45,6 +45,7 @@ const float kRotAccDeg = 30.f;
   vel_ = vel;
   velOffset_ = CGPointMake(0.f, 0.f);
   rotVelDeg_ = 0.f;
+  isFadeRequest_ = NO;
   
   self.position = pos;
 }
@@ -128,5 +129,19 @@ const float kRotAccDeg = 30.f;
 
 //------------------------------------------------------------------------------
 
+- (void)fade
+{
+  if (isFadeRequest_)
+  {
+    return;
+  }
+  
+  isFadeRequest_ = YES;
+  
+  const CCActionFadeOut* fadeOut = [CCActionFadeOut actionWithDuration:0.25f];
+  const CCActionRemove* remove = [CCActionRemove action];
+  [self runAction:[CCActionSequence actionWithArray:@[fadeOut, remove]]];
+}
 
+//------------------------------------------------------------------------------
 @end

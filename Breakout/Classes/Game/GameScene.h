@@ -8,6 +8,7 @@
 
 #import <Foundation/Foundation.h>
 #import "cocos2d.h"
+#import "cocos2d-ui.h"
 
 @class BlockMgr;
 @class BallMgr;
@@ -21,6 +22,14 @@
   BarMgr*         barMgr_;
   Field*          field_;
   CCPhysicsNode*  physicsNode_;
+  BOOL            hasWave2Done_;
+  BOOL            hasWave3Done_;
+  BOOL            isFinished_;
+  CCButton*       resetButton0_;
+  CCButton*       resetButton1_;
+  CCTime          elapsedTimme_;
+  CCLabelTTF*     countLabel0_;
+  CCLabelTTF*     countLabel1_;
 }
 
 + (GameScene *)scene;

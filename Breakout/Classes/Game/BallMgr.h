@@ -20,5 +20,8 @@
 - (id)init;
 - (void)createBalls;
 - (Ball *)activateOne:(CCNode *)parentNode;
+- (void)activateAndInitializeTwo:(CCNode *)parentNode;
+- (void)activateAndInitializeFour:(CCNode *)parentNode;
+- (void)fadeAll;
 
 @end

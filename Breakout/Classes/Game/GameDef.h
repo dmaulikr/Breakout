@@ -25,7 +25,7 @@ enum
 
 enum
 {
-  kBallNum = 5,
+  kBallNum = 10,
 };
 
 extern const float kBlockWidth;

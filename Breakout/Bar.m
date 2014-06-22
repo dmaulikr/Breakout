@@ -7,7 +7,6 @@
 //
 
 #import "Bar.h"
-#import "GameScene.h"
 
 
 @implementation Bar
@@ -30,14 +29,14 @@ const float kKd = 0.75f;
   self = [super initWithImageNamed:@"Bar.png"];
   if (!self) return nil;
   
-  const GameScene* scene = (GameScene*)[[CCDirector sharedDirector] runningScene];
+  const CGSize size = [[CCDirector sharedDirector] viewSize];
   
   vel_ = 0.f;
   CGPoint pos;
-  pos.x = scene.contentSize.width / 2;
+  pos.x = size.width / 2;
   pos.y = (team == kAlfa) ?
           kBlockHeight * (kTeamBlockRowNum + 2) + kBarHeight / 2 :
-          scene.contentSize.height - ((kBlockHeight * (kTeamBlockRowNum + 2)) + kBarHeight / 2);
+          size.height - ((kBlockHeight * (kTeamBlockRowNum + 2)) + kBarHeight / 2);
   self.position = pos;
   
   // 物理
@@ -95,8 +94,8 @@ const float kKd = 0.75f;
     float posX = self.position.x + vel_;
     
     // クランプ
-    const GameScene* scene = (GameScene*)[[CCDirector sharedDirector] runningScene];
-    const float maxPosX = scene.contentSize.width - (kBarWidth / 2);
+    const CGSize size = [[CCDirector sharedDirector] viewSize];
+    const float maxPosX = size.width - (kBarWidth / 2);
     const float minPosX = kBarWidth / 2;
     if (posX > maxPosX) posX = maxPosX;
     else if (posX < minPosX) posX = minPosX;

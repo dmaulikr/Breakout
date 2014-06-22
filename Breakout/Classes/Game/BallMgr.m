@@ -9,6 +9,7 @@
 #import "BallMgr.h"
 #import "Ball.h"
 #import "GameDef.h"
+#import "GameScene.h"
 
 #import "cocos2d.h"
 
@@ -51,6 +52,51 @@
   }
   
   return nil;
+}
+
+//------------------------------------------------------------------------------
+
+- (void)activateAndInitializeTwo:(CCNode *)parentNode
+{
+  const CGSize size = [[CCDirector sharedDirector] viewSize];
+  const CGPoint pos = ccp(size.width / 2, size.height / 2);
+  
+  Ball* ball0 = [self activateOne:parentNode];
+  [ball0 initialize:pos Vel:ccp(0.f, -10.f)];
+  
+  Ball* ball1 = [self activateOne:parentNode];
+  [ball1 initialize:pos Vel:ccp(0.f, 10.f)];
+}
+
+//------------------------------------------------------------------------------
+
+- (void)activateAndInitializeFour:(CCNode *)parentNode
+{
+  const CGSize size = [[CCDirector sharedDirector] viewSize];
+  const CGPoint pos = ccp(size.width / 2, size.height / 2);
+  
+  Ball* ball0 = [self activateOne:parentNode];
+  [ball0 initialize:pos Vel:ccp(10.f, -14.f)];
+  
+  Ball* ball1 = [self activateOne:parentNode];
+  [ball1 initialize:pos Vel:ccp(-10.f, -14.f)];
+  
+  Ball* ball2 = [self activateOne:parentNode];
+  [ball2 initialize:pos Vel:ccp(10.f, 14.f)];
+  
+  Ball* ball3 = [self activateOne:parentNode];
+  [ball3 initialize:pos Vel:ccp(-10.f, 14.f)];
+  
+}
+
+//------------------------------------------------------------------------------
+
+- (void)fadeAll
+{
+  for (Ball* ball in ballList_)
+  {
+    [ball fade];
+  }
 }
 
 //------------------------------------------------------------------------------
