@@ -11,15 +11,17 @@
 
 @interface Ball : CCSprite {
  @private
-  CGPoint vel_;
-  CGPoint velOffset_;
-  float   rotVelDeg_;
-  BOOL    isFadeRequest_;
+  CGPoint         vel_;
+  CGPoint         velOffset_;
+  float           rotVelDeg_;
+  BOOL            isFadeRequest_;
+  CCMotionStreak* motionStreak_;
 }
 
 - (id)init;
 - (void)initialize:(CGPoint)pos Vel:(CGPoint)vel;
 - (void)informCollisionBegin:(CCPhysicsCollisionPair *)pair Node:(CCNode *)node;
 - (void)fade;
+- (CCMotionStreak *)motionStreak;
 
 @end

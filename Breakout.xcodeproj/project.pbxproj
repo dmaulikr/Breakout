@@ -19,6 +19,7 @@
 		355DCA4D1956ED4900A8B9A9 /* Block.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 355DCA481956ED4900A8B9A9 /* Block.mp3 */; };
 		355DCA4E1956ED4900A8B9A9 /* Fanfare.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 355DCA491956ED4900A8B9A9 /* Fanfare.mp3 */; };
 		355DCA4F1956ED4900A8B9A9 /* Ready.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 355DCA4A1956ED4900A8B9A9 /* Ready.mp3 */; };
+		355DCA511956FB0F00A8B9A9 /* Block.png in Resources */ = {isa = PBXBuildFile; fileRef = 355DCA501956FB0E00A8B9A9 /* Block.png */; };
 		3563ECB2195321940071AD77 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3563ECB1195321940071AD77 /* QuartzCore.framework */; };
 		3563ECB4195321940071AD77 /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3563ECB3195321940071AD77 /* OpenGLES.framework */; };
 		3563ECB6195321940071AD77 /* OpenAL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3563ECB5195321940071AD77 /* OpenAL.framework */; };
@@ -258,6 +259,7 @@
 		355DCA481956ED4900A8B9A9 /* Block.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = Block.mp3; path = Resources/Sounds/Block.mp3; sourceTree = "<group>"; };
 		355DCA491956ED4900A8B9A9 /* Fanfare.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = Fanfare.mp3; path = Resources/Sounds/Fanfare.mp3; sourceTree = "<group>"; };
 		355DCA4A1956ED4900A8B9A9 /* Ready.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = Ready.mp3; path = Resources/Sounds/Ready.mp3; sourceTree = "<group>"; };
+		355DCA501956FB0E00A8B9A9 /* Block.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Block.png; path = Resources/Images/Block.png; sourceTree = "<group>"; };
 		3563ECAE195321940071AD77 /* Breakout.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Breakout.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3563ECB1195321940071AD77 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		3563ECB3195321940071AD77 /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
@@ -1512,6 +1514,7 @@
 		3563EF41195525C50071AD77 /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				355DCA501956FB0E00A8B9A9 /* Block.png */,
 				3563EF5719553FEB0071AD77 /* Bar.png */,
 				3563EF5019552B1A0071AD77 /* Background.png */,
 				3563EF44195529360071AD77 /* Block00.png */,
@@ -1638,6 +1641,7 @@
 				3563EF4E195529370071AD77 /* Block04.png in Resources */,
 				3563EF25195321990071AD77 /* LICENSE_Chipmunk.txt in Resources */,
 				3563EF4C195529360071AD77 /* Block02.png in Resources */,
+				355DCA511956FB0F00A8B9A9 /* Block.png in Resources */,
 				3563ECDB195321940071AD77 /* Icon-72.png in Resources */,
 				3563EEB7195321980071AD77 /* LICENSE_CCBReader.txt in Resources */,
 				3563EF43195525F10071AD77 /* Ball.png in Resources */,

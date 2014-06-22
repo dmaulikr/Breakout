@@ -23,7 +23,7 @@ const float kBlockHeight = 20.f;
 {
   const int type = rand() % kTypeNum;
   
-  self = [super initWithImageNamed:[NSString stringWithFormat:@"Block%02d.png", type]];
+  self = [super initWithImageNamed:@"Block.png"];
   if (!self) return nil;
   
   team_ = team;
@@ -33,6 +33,7 @@ const float kBlockHeight = 20.f;
   parentMgr_ = parentMgr;
   self.position = [self calcPos:team_ Index:index_];
   if (team == kBravo) self.rotation = 180.f;
+  self.color = [self typeToColor:type];
   
   // 物理
   self.physicsBody = [CCPhysicsBody bodyWithRect:self.spriteFrame.rect cornerRadius:0.f];
@@ -89,6 +90,21 @@ const float kBlockHeight = 20.f;
 
 - (void)update:(CCTime)delta
 {
+}
+
+//------------------------------------------------------------------------------
+
+- (CCColor *)typeToColor:(int)type
+{
+  switch (type) {
+    case 0: return [CCColor colorWithCcColor3b:ccc3(46, 204, 113)];
+    case 1: return [CCColor colorWithCcColor3b:ccc3(52, 152, 219)];
+    case 2: return [CCColor colorWithCcColor3b:ccc3(155, 89, 182)];
+    case 3: return [CCColor colorWithCcColor3b:ccc3(241, 196, 15)];
+    case 4: return [CCColor colorWithCcColor3b:ccc3(230, 126, 34)];
+    case 5: return [CCColor colorWithCcColor3b:ccc3(231, 76, 60)];
+    default: return [CCColor whiteColor];
+  }
 }
 
 //------------------------------------------------------------------------------

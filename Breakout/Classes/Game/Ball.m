@@ -34,6 +34,9 @@ const float kRotAccDeg = 30.f;
   // 物理
   self.physicsBody = [CCPhysicsBody bodyWithCircleOfRadius:self.spriteFrame.rect.size.height / 2 andCenter:ccp(self.spriteFrame.rect.size.width / 2, self.spriteFrame.rect.size.height / 2)];
   self.physicsBody.collisionType = @"Ball";
+
+  // モーション
+  motionStreak_ = [CCMotionStreak streakWithFade:0.5f minSeg:1.f width:self.spriteFrame.rect.size.width color:[CCColor whiteColor] textureFilename:@"Ball.png"];
   
   return self;
 }
@@ -92,6 +95,9 @@ const float kRotAccDeg = 30.f;
 
   // 位置更新
   [self setPosition:ccp(self.position.x + vel_.x, self.position.y + vel_.y)];
+  
+  // モーション
+  motionStreak_.position = self.position;
 }
 
 //------------------------------------------------------------------------------
@@ -106,11 +112,16 @@ const float kRotAccDeg = 30.f;
   
   // NSLog(@"normal: (%f, %f)", normal.x, normal.y);
   
+  // 対ブロック
   if ([node isMemberOfClass:[Block class]])
   {
     Block* block = (Block *)node;
     [block fade];
+    
+    // モーションブラーの色が当たったブロックの色に変わる
+    motionStreak_.color = block.color;
   }
+  // 対バー
   else if ([node isMemberOfClass:[Bar class]])
   {
     Bar* bar = (Bar *)node;
@@ -141,6 +152,14 @@ const float kRotAccDeg = 30.f;
   const CCActionFadeOut* fadeOut = [CCActionFadeOut actionWithDuration:0.25f];
   const CCActionRemove* remove = [CCActionRemove action];
   [self runAction:[CCActionSequence actionWithArray:@[fadeOut, remove]]];
+  [motionStreak_ removeFromParent];
+}
+
+//------------------------------------------------------------------------------
+
+- (CCMotionStreak *)motionStreak
+{
+  return motionStreak_;
 }
 
 //------------------------------------------------------------------------------

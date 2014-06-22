@@ -47,6 +47,7 @@
     if (![ball parent])
     {
       [parentNode addChild:ball];
+      [parentNode addChild:ball.motionStreak];
       return ball;
     }
   }
