@@ -14,6 +14,8 @@
 #import "Field.h"
 #import "GameDef.h"
 
+#import "OALSimpleAudio.h"
+
 //------------------------------------------------------------------------------
 #pragma mark - GameScene
 //------------------------------------------------------------------------------
@@ -37,6 +39,13 @@
   
   self = [super init];
   if (!self) return nil;
+  
+  // サウンド
+  [[OALSimpleAudio sharedInstance] preloadBg:@"Bgm.mp3"];
+  [[OALSimpleAudio sharedInstance] preloadEffect:@"Bar.mp3"];
+  [[OALSimpleAudio sharedInstance] preloadEffect:@"Block.mp3"];
+  [[OALSimpleAudio sharedInstance] preloadEffect:@"Fanfare.mp3"];
+  [[OALSimpleAudio sharedInstance] preloadEffect:@"Ready.mp3"];
   
   // 物理
   physicsNode_ = [CCPhysicsNode node];
@@ -186,6 +195,9 @@
       [self addChild:bravoLabel];
       
       isFinished_ = YES;
+
+      [[OALSimpleAudio sharedInstance] stopBg];
+      [[OALSimpleAudio sharedInstance] playEffect:@"Fanfare.mp3"];
     }
   }
   
@@ -205,6 +217,8 @@
         countLabel1_.position = ccp(0.5f, 0.7f);
         countLabel1_.rotation = 180.f;
         [self addChild:countLabel1_];
+        
+        [[OALSimpleAudio sharedInstance] playEffect:@"Ready.mp3"];
       }
     }
     else if (elapsedTimme_ < 2.f)
@@ -238,6 +252,8 @@
         countLabel0_.string = @"Go!";
         countLabel1_.string = @"Go!";
         [ballMgr_ activateAndInitializeTwo:physicsNode_];
+        
+        [[OALSimpleAudio sharedInstance] playBg:@"Bgm.mp3" loop:YES];
       }
     }
   }
@@ -268,6 +284,7 @@
 {
   Ball* ball = (Ball*)nodeA;
   [ball informCollisionBegin:pair Node:nodeB];
+  [[OALSimpleAudio sharedInstance] playEffect:@"Block.mp3"];
   return YES;
 }
 
@@ -286,6 +303,7 @@
 {
   Ball* ball = (Ball*)nodeA;
   [ball informCollisionBegin:pair Node:nodeB];
+  [[OALSimpleAudio sharedInstance] playEffect:@"Bar.mp3"];
   return YES;
 }
 

@@ -14,6 +14,11 @@
 		355DCA3C1955B12600A8B9A9 /* InvisibleButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 355DCA3B1955B12600A8B9A9 /* InvisibleButton.m */; };
 		355DCA3F1955B76600A8B9A9 /* BarMgr.m in Sources */ = {isa = PBXBuildFile; fileRef = 355DCA3E1955B76600A8B9A9 /* BarMgr.m */; };
 		355DCA42195682C800A8B9A9 /* Field.m in Sources */ = {isa = PBXBuildFile; fileRef = 355DCA41195682C800A8B9A9 /* Field.m */; };
+		355DCA4B1956ED4900A8B9A9 /* Bar.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 355DCA461956ED4900A8B9A9 /* Bar.mp3 */; };
+		355DCA4C1956ED4900A8B9A9 /* Bgm.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 355DCA471956ED4900A8B9A9 /* Bgm.mp3 */; };
+		355DCA4D1956ED4900A8B9A9 /* Block.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 355DCA481956ED4900A8B9A9 /* Block.mp3 */; };
+		355DCA4E1956ED4900A8B9A9 /* Fanfare.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 355DCA491956ED4900A8B9A9 /* Fanfare.mp3 */; };
+		355DCA4F1956ED4900A8B9A9 /* Ready.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 355DCA4A1956ED4900A8B9A9 /* Ready.mp3 */; };
 		3563ECB2195321940071AD77 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3563ECB1195321940071AD77 /* QuartzCore.framework */; };
 		3563ECB4195321940071AD77 /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3563ECB3195321940071AD77 /* OpenGLES.framework */; };
 		3563ECB6195321940071AD77 /* OpenAL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3563ECB5195321940071AD77 /* OpenAL.framework */; };
@@ -248,6 +253,11 @@
 		355DCA3E1955B76600A8B9A9 /* BarMgr.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BarMgr.m; sourceTree = "<group>"; };
 		355DCA40195682C700A8B9A9 /* Field.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Field.h; sourceTree = "<group>"; };
 		355DCA41195682C800A8B9A9 /* Field.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Field.m; sourceTree = "<group>"; };
+		355DCA461956ED4900A8B9A9 /* Bar.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = Bar.mp3; path = Resources/Sounds/Bar.mp3; sourceTree = "<group>"; };
+		355DCA471956ED4900A8B9A9 /* Bgm.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = Bgm.mp3; path = Resources/Sounds/Bgm.mp3; sourceTree = "<group>"; };
+		355DCA481956ED4900A8B9A9 /* Block.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = Block.mp3; path = Resources/Sounds/Block.mp3; sourceTree = "<group>"; };
+		355DCA491956ED4900A8B9A9 /* Fanfare.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = Fanfare.mp3; path = Resources/Sounds/Fanfare.mp3; sourceTree = "<group>"; };
+		355DCA4A1956ED4900A8B9A9 /* Ready.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = Ready.mp3; path = Resources/Sounds/Ready.mp3; sourceTree = "<group>"; };
 		3563ECAE195321940071AD77 /* Breakout.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Breakout.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3563ECB1195321940071AD77 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		3563ECB3195321940071AD77 /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
@@ -686,6 +696,18 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		355DCA451956ED3800A8B9A9 /* Sounds */ = {
+			isa = PBXGroup;
+			children = (
+				355DCA461956ED4900A8B9A9 /* Bar.mp3 */,
+				355DCA471956ED4900A8B9A9 /* Bgm.mp3 */,
+				355DCA481956ED4900A8B9A9 /* Block.mp3 */,
+				355DCA491956ED4900A8B9A9 /* Fanfare.mp3 */,
+				355DCA4A1956ED4900A8B9A9 /* Ready.mp3 */,
+			);
+			name = Sounds;
+			sourceTree = "<group>";
+		};
 		3563ECA5195321940071AD77 = {
 			isa = PBXGroup;
 			children = (
@@ -735,6 +757,7 @@
 		3563ECCC195321940071AD77 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				355DCA451956ED3800A8B9A9 /* Sounds */,
 				3563EF41195525C50071AD77 /* Images */,
 				3563ECCD195321940071AD77 /* Default.png */,
 				3563ECCF195321940071AD77 /* Default@2x.png */,
@@ -1599,10 +1622,12 @@
 				3563ECD0195321940071AD77 /* Default@2x.png in Resources */,
 				3563ECE3195321940071AD77 /* Icon-120.png in Resources */,
 				3563ECD9195321940071AD77 /* Icon@2x.png in Resources */,
+				355DCA4C1956ED4900A8B9A9 /* Bgm.mp3 in Resources */,
 				3563ECEB195321950071AD77 /* Icon-Small@2x.png in Resources */,
 				3563ECDD195321940071AD77 /* Icon-72@2x.png in Resources */,
 				3563ECCE195321940071AD77 /* Default.png in Resources */,
 				3563ECD7195321940071AD77 /* Icon.png in Resources */,
+				355DCA4F1956ED4900A8B9A9 /* Ready.mp3 in Resources */,
 				3563ECE5195321950071AD77 /* Icon-iPad-Spotlight-iOS7@2x.png in Resources */,
 				3563ECD4195321940071AD77 /* Default-Landscape~ipad.png in Resources */,
 				3563EF5819553FEB0071AD77 /* Bar.png in Resources */,
@@ -1616,14 +1641,17 @@
 				3563ECDB195321940071AD77 /* Icon-72.png in Resources */,
 				3563EEB7195321980071AD77 /* LICENSE_CCBReader.txt in Resources */,
 				3563EF43195525F10071AD77 /* Ball.png in Resources */,
+				355DCA4E1956ED4900A8B9A9 /* Fanfare.mp3 in Resources */,
 				3563EE27195321970071AD77 /* LICENSE_cocos2d.txt in Resources */,
 				3563ECD2195321940071AD77 /* Default-568h@2x.png in Resources */,
 				3563ECF2195321950071AD77 /* iTunesArtwork in Resources */,
 				3563ECED195321950071AD77 /* Icon-Spotlight-iOS7.png in Resources */,
 				3563EF4F195529370071AD77 /* Block05.png in Resources */,
 				3563ECE1195321940071AD77 /* Icon-76@2x.png in Resources */,
+				355DCA4B1956ED4900A8B9A9 /* Bar.mp3 in Resources */,
 				3563ECEF195321950071AD77 /* Icon-Spotlight-iOS7@2x.png in Resources */,
 				3563EF4B195529360071AD77 /* Block01.png in Resources */,
+				355DCA4D1956ED4900A8B9A9 /* Block.mp3 in Resources */,
 				3563EF5119552B1A0071AD77 /* Background.png in Resources */,
 				3563ECDF195321940071AD77 /* Icon-76.png in Resources */,
 				3563ECF4195321950071AD77 /* iTunesArtwork@2x in Resources */,
