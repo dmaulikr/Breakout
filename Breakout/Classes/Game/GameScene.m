@@ -138,7 +138,7 @@
   
   if (!hasWave3Done_)
   {
-    if (blockMgr_.brokenBlockNum >= 100)
+    if (blockMgr_.brokenBlockNum >= 90)
     {
       [ballMgr_ activateAndInitializeFour:physicsNode_];
       hasWave3Done_ = YES;

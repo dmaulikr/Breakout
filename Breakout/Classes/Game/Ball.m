@@ -19,10 +19,10 @@
 //------------------------------------------------------------------------------
 
 const float kMaxRotVelDeg = 30.f;
-const float kRotVelKd = 0.98f;
-const float kBallVel = 18.f;
-const float kAccByRot = 1.f;
-const float kRotAccDeg = 30.f;
+const float kRotVelKd = 0.993f;
+const float kBallVel = 6.7f;
+const float kAccByRot = 1.f / 3;
+const float kRotAccDeg = 10.f;
 
 //------------------------------------------------------------------------------
 
@@ -148,7 +148,7 @@ const float kRotAccDeg = 30.f;
     const double cross = CGPointCross(normal, barVelVertical);
     const double magnitude = CGPointMagnitude(barVelVertical);
     const double barVelRate = magnitude / [bar maxVel];
-    const float rotAccDeg = kRotAccDeg * (barVelRate * barVelRate);
+    const float rotAccDeg = kRotAccDeg * pow(barVelRate, 3.f);
     if (cross > 0.f) rotVelDeg_ += rotAccDeg;
     else if (cross < 0.f) rotVelDeg_ -= rotAccDeg;
   }
