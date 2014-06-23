@@ -62,16 +62,34 @@
   // リセットボタン
   resetButton0_ = [CCButton buttonWithTitle:@"[Reset]" fontName:@"Verdana-Bold" fontSize:18.f];
   resetButton0_.positionType = CCPositionTypeNormalized;
-  resetButton0_.position = ccp(0.5f, 0.035f);
+  resetButton0_.position = ccp(0.5f, 0.04f);
   [resetButton0_ setTarget:self selector:@selector(onResetButtonClicked:)];
   [self addChild:resetButton0_];
   
   resetButton1_ = [CCButton buttonWithTitle:@"[Reset]" fontName:@"Verdana-Bold" fontSize:18.f];
   resetButton1_.positionType = CCPositionTypeNormalized;
-  resetButton1_.position = ccp(0.5f, 0.965f);
+  resetButton1_.position = ccp(0.5f, 0.96f);
   resetButton1_.rotation = 180.f;
   [resetButton1_ setTarget:self selector:@selector(onResetButtonClicked:)];
   [self addChild:resetButton1_];
+  
+  // 左右ラベル
+  CCLabelTTF* alfaRight = [CCLabelTTF labelWithString:@">>" fontName:@"Verdana-Bold" fontSize:18.f];
+  alfaRight.positionType = CCPositionTypeNormalized;
+  alfaRight.position = ccp(0.9f, 0.04f);
+  [self addChild:alfaRight];
+  CCLabelTTF* alfaLeft = [CCLabelTTF labelWithString:@"<<" fontName:@"Verdana-Bold" fontSize:18.f];
+  alfaLeft.positionType = CCPositionTypeNormalized;
+  alfaLeft.position = ccp(0.1f, 0.04f);
+  [self addChild:alfaLeft];
+  CCLabelTTF* bravoRight = [CCLabelTTF labelWithString:@">>" fontName:@"Verdana-Bold" fontSize:18.f];
+  bravoRight.positionType = CCPositionTypeNormalized;
+  bravoRight.position = ccp(0.9f, 0.96f);
+  [self addChild:bravoRight];
+  CCLabelTTF* bravoLeft = [CCLabelTTF labelWithString:@"<<" fontName:@"Verdana-Bold" fontSize:18.f];
+  bravoLeft.positionType = CCPositionTypeNormalized;
+  bravoLeft.position = ccp(0.1f, 0.96f);
+  [self addChild:bravoLeft];
 
   // メインフィールド
   field_ = [[Field alloc] init];
