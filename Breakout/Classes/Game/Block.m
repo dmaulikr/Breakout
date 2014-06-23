@@ -76,8 +76,8 @@ const float kBlockHeight = 20.f;
   const CGSize size = [[CCDirector sharedDirector] viewSize];
   
   const CGPoint basePos = (team == kAlfa) ?
-                          ccp(kBlockWidth * 0.5f, kBlockHeight * (kTeamBlockRowNum - 0.5f)) :
-                          ccp(size.width - (kBlockWidth * 0.5f), size.height - (kBlockHeight * (kTeamBlockRowNum - 0.5f)));
+                          ccp(kBlockWidth * 0.5f, kBlockHeight * (kTeamBlockRowNum - 0.5f) + kMarginBottomTop) :
+                          ccp(size.width - (kBlockWidth * 0.5f), size.height - (kBlockHeight * (kTeamBlockRowNum - 0.5f) + kMarginBottomTop));
   
   CGPoint pos = basePos;
   pos.x += offset.x * col;

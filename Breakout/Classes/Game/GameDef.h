@@ -32,5 +32,6 @@ extern const float kBlockWidth;
 extern const float kBlockHeight;
 extern const float kBarWidth;
 extern const float kBarHeight;
+extern const float kMarginBottomTop;
 
 #endif

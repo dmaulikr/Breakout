@@ -36,7 +36,7 @@ const float kRotAccDeg = 10.f;
   self.physicsBody.collisionType = @"Ball";
 
   // モーション
-  motionStreak_ = [CCMotionStreak streakWithFade:0.5f minSeg:1.f width:self.spriteFrame.rect.size.width color:[CCColor whiteColor] textureFilename:@"Ball.png"];
+  motionStreak_ = [CCMotionStreak streakWithFade:0.3f minSeg:1.f width:self.spriteFrame.rect.size.width color:[CCColor whiteColor] textureFilename:@"Ball.png"];
   
   return self;
 }
@@ -83,6 +83,10 @@ const float kRotAccDeg = 10.f;
     vel_ = CGPointAdd(vel_, velOffset_);
     velOffset_ = CGPointMake(0.f, 0.f);
     
+    // 速度調整
+    const CGPoint normalizedVel = CGPointNormalize(vel_);
+    vel_ = CGPointScale(normalizedVel, kBallVel);
+    
     // 回転による加速
     CGPoint accByRot;
     {
@@ -97,10 +101,6 @@ const float kRotAccDeg = 10.f;
     
     // 加速
     vel_ = CGPointAdd(vel_, accByRot);
-    
-    // 速度調整
-    const CGPoint normalizedVel = CGPointNormalize(vel_);
-    vel_ = CGPointScale(normalizedVel, kBallVel);
   }
 
   // 位置更新

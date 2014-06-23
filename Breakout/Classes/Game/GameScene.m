@@ -60,15 +60,15 @@
   [physicsNode_ addChild:background];
   
   // リセットボタン
-  resetButton0_ = [CCButton buttonWithTitle:@"Reset" fontName:@"Verdana-Bold" fontSize:18.f];
+  resetButton0_ = [CCButton buttonWithTitle:@"[Reset]" fontName:@"Verdana-Bold" fontSize:18.f];
   resetButton0_.positionType = CCPositionTypeNormalized;
-  resetButton0_.position = ccp(0.95f, 0.5f);
+  resetButton0_.position = ccp(0.5f, 0.035f);
   [resetButton0_ setTarget:self selector:@selector(onResetButtonClicked:)];
   [self addChild:resetButton0_];
   
-  resetButton1_ = [CCButton buttonWithTitle:@"Reset" fontName:@"Verdana-Bold" fontSize:18.f];
+  resetButton1_ = [CCButton buttonWithTitle:@"[Reset]" fontName:@"Verdana-Bold" fontSize:18.f];
   resetButton1_.positionType = CCPositionTypeNormalized;
-  resetButton1_.position = ccp(0.05f, 0.5f);
+  resetButton1_.position = ccp(0.5f, 0.965f);
   resetButton1_.rotation = 180.f;
   [resetButton1_ setTarget:self selector:@selector(onResetButtonClicked:)];
   [self addChild:resetButton1_];

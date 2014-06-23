@@ -35,8 +35,8 @@ const float kKd = 0.91f;
   CGPoint pos;
   pos.x = size.width / 2;
   pos.y = (team == kAlfa) ?
-          kBlockHeight * (kTeamBlockRowNum + 2) + kBarHeight / 2 :
-          size.height - ((kBlockHeight * (kTeamBlockRowNum + 2)) + kBarHeight / 2);
+          kBlockHeight * (kTeamBlockRowNum + 2) + kBarHeight / 2 + kMarginBottomTop :
+          size.height - ((kBlockHeight * (kTeamBlockRowNum + 2)) + kBarHeight / 2 + kMarginBottomTop);
   self.position = pos;
   
   // 物理
