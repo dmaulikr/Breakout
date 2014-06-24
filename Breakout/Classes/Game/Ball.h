@@ -16,6 +16,7 @@
   float           rotVelDeg_;
   BOOL            isFadeRequest_;
   CCMotionStreak* motionStreak_;
+  float           boostRate_;
 }
 
 - (id)init;

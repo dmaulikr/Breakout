@@ -21,5 +21,6 @@
 - (void)accLeft;
 - (float)vel;
 - (float)maxVel;
+- (BOOL)checkIfCriticalHit:(CGPoint)pos;
 
 @end

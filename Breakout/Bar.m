@@ -8,6 +8,8 @@
 
 #import "Bar.h"
 
+#import "BPGeometry.h"
+
 
 @implementation Bar
 
@@ -21,6 +23,7 @@ const float kBarHeight = 12.f;
 const float kVel = 6.f;
 const float kAcc = 0.9f;
 const float kKd = 0.91f;
+const float kCriticalDistance = 15.f;
 
 //------------------------------------------------------------------------------
 
@@ -102,6 +105,15 @@ const float kKd = 0.91f;
     
     [self setPosition:ccp(posX, self.position.y)];
   }
+}
+
+//------------------------------------------------------------------------------
+
+- (BOOL)checkIfCriticalHit:(CGPoint)pos
+{
+  const float square_distance = pow(self.position.x - pos.x, 2) + pow(self.position.y - pos.y, 2);
+  
+  return square_distance <= pow(kCriticalDistance, 2);
 }
 
 //------------------------------------------------------------------------------

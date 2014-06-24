@@ -12,6 +12,7 @@
 #import "Bar.h"
 
 #import "BPGeometry.h"
+#import "OALSimpleAudio.h"
 
 
 @implementation Ball
@@ -23,6 +24,8 @@ const float kRotVelKd = 0.993f;
 const float kBallVel = 6.7f;
 const float kAccByRot = 1.f / 3;
 const float kRotAccDeg = 10.f;
+const float kBoostVel = 6.7f;
+const float kBoostKd = 0.98f;
 
 //------------------------------------------------------------------------------
 
@@ -49,6 +52,7 @@ const float kRotAccDeg = 10.f;
   velOffset_ = CGPointMake(0.f, 0.f);
   rotVelDeg_ = 0.f;
   isFadeRequest_ = NO;
+  boostRate_ = 0.f;
   
   self.position = pos;
 }
@@ -77,6 +81,11 @@ const float kRotAccDeg = 10.f;
     else if ( rotVelDeg_ < -kMaxRotVelDeg) rotVelDeg_ = -kMaxRotVelDeg;
   }
   
+  // ブースト更新
+  {
+    boostRate_ *= kBoostKd;
+  }
+  
   // 速度更新
   {
     // 補正値適用
@@ -84,8 +93,9 @@ const float kRotAccDeg = 10.f;
     velOffset_ = CGPointMake(0.f, 0.f);
     
     // 速度調整
+    const float ballVel = kBallVel + kBoostVel * boostRate_;
     const CGPoint normalizedVel = CGPointNormalize(vel_);
-    vel_ = CGPointScale(normalizedVel, kBallVel);
+    vel_ = CGPointScale(normalizedVel, ballVel);
     
     // 回転による加速
     CGPoint accByRot;
@@ -151,6 +161,16 @@ const float kRotAccDeg = 10.f;
     const float rotAccDeg = kRotAccDeg * pow(barVelRate, 3.f);
     if (cross > 0.f) rotVelDeg_ += rotAccDeg;
     else if (cross < 0.f) rotVelDeg_ -= rotAccDeg;
+    
+    if ([bar checkIfCriticalHit:self.position])
+    {
+      boostRate_ = 1.f;
+      [[OALSimpleAudio sharedInstance] playEffect:@"Critical.mp3"];
+    }
+    else
+    {
+      [[OALSimpleAudio sharedInstance] playEffect:@"Bar.mp3"];
+    }
   }
 }
 

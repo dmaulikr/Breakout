@@ -54,7 +54,7 @@ const float kBlockHeight = 20.f;
   
   isFadeRequest_ = YES;
   
-  const CCActionFadeOut* fadeOut = [CCActionFadeOut actionWithDuration:0.25f];
+  const CCActionFadeOut* fadeOut = [CCActionFadeOut actionWithDuration:0.5f];
   const CCActionRemove* remove = [CCActionRemove action];
   [self runAction:[CCActionSequence actionWithArray:@[fadeOut, remove]]];
   

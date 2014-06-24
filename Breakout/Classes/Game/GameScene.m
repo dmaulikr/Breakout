@@ -46,6 +46,7 @@
   [[OALSimpleAudio sharedInstance] preloadEffect:@"Block.mp3"];
   [[OALSimpleAudio sharedInstance] preloadEffect:@"Fanfare.mp3"];
   [[OALSimpleAudio sharedInstance] preloadEffect:@"Ready.mp3"];
+  [[OALSimpleAudio sharedInstance] preloadEffect:@"Critical.mp3"];
   
   // 物理
   physicsNode_ = [CCPhysicsNode node];
@@ -321,7 +322,6 @@
 {
   Ball* ball = (Ball*)nodeA;
   [ball informCollisionBegin:pair Node:nodeB];
-  [[OALSimpleAudio sharedInstance] playEffect:@"Bar.mp3"];
   return YES;
 }
 

@@ -20,6 +20,7 @@
 		355DCA4E1956ED4900A8B9A9 /* Fanfare.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 355DCA491956ED4900A8B9A9 /* Fanfare.mp3 */; };
 		355DCA4F1956ED4900A8B9A9 /* Ready.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 355DCA4A1956ED4900A8B9A9 /* Ready.mp3 */; };
 		355DCA511956FB0F00A8B9A9 /* Block.png in Resources */ = {isa = PBXBuildFile; fileRef = 355DCA501956FB0E00A8B9A9 /* Block.png */; };
+		355DCA571959AB9300A8B9A9 /* Critical.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 355DCA561959AB9200A8B9A9 /* Critical.mp3 */; };
 		3563ECB2195321940071AD77 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3563ECB1195321940071AD77 /* QuartzCore.framework */; };
 		3563ECB4195321940071AD77 /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3563ECB3195321940071AD77 /* OpenGLES.framework */; };
 		3563ECB6195321940071AD77 /* OpenAL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3563ECB5195321940071AD77 /* OpenAL.framework */; };
@@ -260,6 +261,7 @@
 		355DCA491956ED4900A8B9A9 /* Fanfare.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = Fanfare.mp3; path = Resources/Sounds/Fanfare.mp3; sourceTree = "<group>"; };
 		355DCA4A1956ED4900A8B9A9 /* Ready.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = Ready.mp3; path = Resources/Sounds/Ready.mp3; sourceTree = "<group>"; };
 		355DCA501956FB0E00A8B9A9 /* Block.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Block.png; path = Resources/Images/Block.png; sourceTree = "<group>"; };
+		355DCA561959AB9200A8B9A9 /* Critical.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = Critical.mp3; path = Resources/Sounds/Critical.mp3; sourceTree = "<group>"; };
 		3563ECAE195321940071AD77 /* Breakout.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Breakout.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3563ECB1195321940071AD77 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		3563ECB3195321940071AD77 /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
@@ -701,6 +703,7 @@
 		355DCA451956ED3800A8B9A9 /* Sounds */ = {
 			isa = PBXGroup;
 			children = (
+				355DCA561959AB9200A8B9A9 /* Critical.mp3 */,
 				355DCA461956ED4900A8B9A9 /* Bar.mp3 */,
 				355DCA471956ED4900A8B9A9 /* Bgm.mp3 */,
 				355DCA481956ED4900A8B9A9 /* Block.mp3 */,
@@ -1657,6 +1660,7 @@
 				3563EF4B195529360071AD77 /* Block01.png in Resources */,
 				355DCA4D1956ED4900A8B9A9 /* Block.mp3 in Resources */,
 				3563EF5119552B1A0071AD77 /* Background.png in Resources */,
+				355DCA571959AB9300A8B9A9 /* Critical.mp3 in Resources */,
 				3563ECDF195321940071AD77 /* Icon-76.png in Resources */,
 				3563ECF4195321950071AD77 /* iTunesArtwork@2x in Resources */,
 			);
